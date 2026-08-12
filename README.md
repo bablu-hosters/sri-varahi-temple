@@ -203,7 +203,7 @@ https://srivarahitemple.netlify.app/
 
 **BABLU HOSTERS – Digital Marketing Agency**
 
-The live website credits Brand Baabulu as the website designer/developer.
+The live website credits Bablu Hosters as the website designer/developer.
 
 ---
 
