@@ -16,7 +16,9 @@
 The website provides devotees with information about the temple, special poojas, festivals, opening hours, gallery, videos, and contact details.
 
 ---
-![Uploading Screenshot 2026-08-12 202557.png…]()
+<p align="center">
+  <img src="./assets/temple-website.png" alt="Sri Varahi Sri Shanishvara Swamy Temple Website" width="100%">
+</p>
 
 
 ## 🛕 About the Temple
