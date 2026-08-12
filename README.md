@@ -198,7 +198,7 @@ https://srivarahitemple.netlify.app/
 
 ### Developed & Designed by
 
-**BRAND BAABULU – Digital Marketing Agency**
+**BABLU HOSTERS – Digital Marketing Agency**
 
 The live website credits Brand Baabulu as the website designer/developer.
 
