@@ -16,6 +16,7 @@
 The website provides devotees with information about the temple, special poojas, festivals, opening hours, gallery, videos, and contact details.
 
 ---
+![Uploading image.png…]()
 
 ## 🛕 About the Temple
 
