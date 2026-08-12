@@ -121,7 +121,7 @@ The temple website also provides information about various Jayanti celebrations,
 **Name:** Vinod Kumar Swamy
 
 📱 **Phone:** +91-9440790912
-📧 **Email:** [vinodswamy.3@gmail.com](mailto:vinodswamy.3@gmail.com)
+
 
 ---
 
