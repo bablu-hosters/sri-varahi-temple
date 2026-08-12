@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+  <title>శ్రీ చంద్రమౌళీశ్వర గంట మఠపాలిట</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f5f5f5;
+    }
+
+    /* ========== HEADER ========== */
+    .header {
+      width: 100%;
+      background: #2e2c35;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      flex-wrap: wrap;
+      min-height: 80px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo img {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      border: 2px solid gold;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .logo h2 {
+      color: #FFD700;
+      font-size: 1.2rem;
+      line-height: 1.2;
+    }
+
+    .logo p {
+      color: #fff;
+      font-size: 0.75rem;
+      opacity: 0.9;
+    }
+
+    /* ========== NAVIGATION ========== */
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: 0.3s;
+      white-space: nowrap;
+    }
+
+    nav a:hover {
+      color: #FFD700;
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 2rem;
+      color: #FFD700;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0 8px;
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      width: 100%;
+      min-height: 90vh;
+      background:
+        linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)),
+        url("img/varahi_full_width.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero-content {
+      max-width: 1000px;
+      color: #fff;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2.2rem, 10vw, 4.5rem);
+      color: #FFD700;
+      text-shadow: 3px 3px 10px rgba(0, 0, 0, .8);
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .hero-content p {
+      font-size: clamp(1rem, 3.5vw, 1.8rem);
+      color: #fff;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, .8);
+      line-height: 1.6;
+    }
+
+    /* ========== ABOUT / TEMPLE SECTION ========== */
+    .temple-section {
+      padding: 60px 5%;
+      background: black;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(1.4rem, 4vw, 2.2rem);
+      color: #FFD700;
+      line-height: 1.4;
+    }
+
+    .temple-container {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .temple-image {
+      flex: 1 1 300px;
+      min-width: 260px;
+    }
+
+    .temple-image img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, .2);
+      display: block;
+      height: auto;
+    }
+
+    .accordion {
+      flex: 1 1 380px;
+      min-width: 280px;
+      width: 100%;
+    }
+
+    .accordion-item {
+      background: white;
+      border-radius: 15px;
+      margin-bottom: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, .1);
+    }
+
+    .accordion-header {
+      width: 100%;
+      padding: 18px 20px;
+      font-size: 1.05rem;
+      font-weight: bold;
+      background: white;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: .3s;
+      text-align: left;
+      gap: 10px;
+    }
+
+    .accordion-header:hover {
+      background: #fff7df;
+    }
+
+    .accordion-header span {
+      font-size: 28px;
+      color: #b8860b;
+      transition: .3s;
+      flex-shrink: 0;
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: .4s ease;
+      background: #fffdf6;
+    }
+
+    .accordion-content ul {
+      padding: 16px 24px 24px 32px;
+    }
+
+    .accordion-content li {
+      margin: 10px 0;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .accordion-item.active .accordion-content {
+      max-height: 600px;
+    }
+
+    .accordion-item.active span {
+      transform: rotate(45deg);
+    }
+
+    /* ========== TIMINGS ========== */
+    .timings-section {
+      min-height: auto;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+    }
+
+    .timings-overlay {
+      width: 100%;
+      max-width: 700px;
+      background: rgba(0, 0, 0, .45);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 30px 24px;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, .2);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+    }
+
+    .timings-overlay h2 {
+      text-align: center;
+      color: #FFD700;
+      margin-bottom: 24px;
+      font-size: clamp(1.4rem, 4vw, 2rem);
+    }
+
+    .time-row {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, .12);
+      gap: 6px;
+      font-size: clamp(0.85rem, 2vw, 1rem);
+    }
+
+    .festival {
+      margin-top: 20px;
+      text-align: center;
+      color: #FFD700;
+      font-weight: bold;
+      font-size: clamp(0.9rem, 2vw, 1.1rem);
+    }
+
+    /* ========== LOCATION ========== */
+    .location-section {
+      min-height: auto;
+      padding: 60px 5%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: black;
+    }
+
+    .location-card {
+      width: 100%;
+      max-width: 1100px;
+      background: rgba(255, 255, 255, .08);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, .2);
+      border-radius: 25px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+    }
+
+    .location-card h2 {
+      color: #FFD700;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      margin-bottom: 10px;
+    }
+
+    .location-card h3 {
+      color: white;
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      margin-bottom: 12px;
+    }
+
+    .location-card p {
+      color: #f1f1f1;
+      font-size: clamp(0.95rem, 2vw, 1.1rem);
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    .map-container {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 20px;
+      border: 2px solid rgba(255, 215, 0, .3);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 350px;
+      border: none;
+      display: block;
+    }
+
+    .map-btn {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+      color: white;
+      background: linear-gradient(135deg, #ff9800, #e91e63);
+      transition: .4s;
+    }
+
+    .map-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(255, 152, 0, .4);
+    }
+
+    /* ========== CONTACT ========== */
+    .contact-section {
+      min-height: auto;
+      padding: 60px 5%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: black;
+    }
+
+    .contact-card {
+      width: 100%;
+      max-width: 1100px;
+      background: rgba(255, 255, 255, .08);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, .15);
+      border-radius: 25px;
+      padding: 30px 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+    }
+
+    .contact-card h2 {
+      text-align: center;
+      color: #FFD700;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      margin-bottom: 30px;
+    }
+
+    .priest {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .priest img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #FFD700;
+      box-shadow: 0 10px 30px rgba(255, 215, 0, .3);
+    }
+
+    .priest h3 {
+      color: #fff;
+      margin-top: 16px;
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+    }
+
+    .priest p {
+      color: #FFD700;
+      font-size: 1rem;
+    }
+
+    .contact-details {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .contact-box {
+      display: flex;
+      gap: 16px;
+      padding: 20px;
+      background: rgba(255, 255, 255, .06);
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, .08);
+      align-items: flex-start;
+    }
+
+    .contact-box span {
+      font-size: 2rem;
+      flex-shrink: 0;
+    }
+
+    .contact-box h4 {
+      color: #FFD700;
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    .contact-box p,
+    .contact-box a {
+      color: #fff;
+      text-decoration: none;
+      line-height: 1.6;
+      font-size: 0.95rem;
+      word-break: break-word;
+    }
+
+    .contact-box a:hover {
+      color: #FFD700;
+    }
+
+    /* ========== FLOATING BUTTONS ========== */
+    .floating-buttons {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      z-index: 9999;
+      align-items: flex-end;
+    }
+
+    .float-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+      font-size: 32px;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+      position: relative;
+      border: 2px solid rgba(255,255,255,0.2);
+    }
+
+    .float-btn.call {
+      background: #1ebea5;
+    }
+
+    .float-btn.live {
+      background: #FF0000;
+    }
+
+    .float-btn:hover {
+      transform: scale(1.12);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    .float-btn i {
+      line-height: 1;
+    }
+
+    /* Ringing animation for WhatsApp and Phone */
+    .ringing {
+      animation: ring 1.5s ease-in-out infinite;
+      transform-origin: center;
+    }
+
+    @keyframes ring {
+      0% { transform: rotate(0deg) scale(1); }
+      10% { transform: rotate(8deg) scale(1.05); }
+      20% { transform: rotate(-8deg) scale(1.05); }
+      30% { transform: rotate(6deg) scale(1.05); }
+      40% { transform: rotate(-6deg) scale(1.05); }
+      50% { transform: rotate(4deg) scale(1.05); }
+      60% { transform: rotate(-4deg) scale(1.05); }
+      70% { transform: rotate(2deg) scale(1.02); }
+      80% { transform: rotate(-2deg) scale(1.02); }
+      90% { transform: rotate(0deg) scale(1); }
+      100% { transform: rotate(0deg) scale(1); }
+    }
+
+    /* Live pulse animation for Live button */
+    .live-pulse {
+      animation: livePulse 1.2s ease-in-out infinite;
+    }
+
+    @keyframes livePulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+      100% { transform: scale(1); }
+    }
+
+    /* LIVE badge */
+    .live-badge {
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      background: #FF0000;
+      color: white;
+      font-size: 9px;
+      font-weight: 800;
+      padding: 2px 7px;
+      border-radius: 12px;
+      letter-spacing: 0.5px;
+      border: 2px solid white;
+      animation: liveBadgePulse 1.5s ease-in-out infinite;
+      text-transform: uppercase;
+      line-height: 1.4;
+    }
+
+    @keyframes liveBadgePulse {
+      0% { opacity: 1; }
+      50% { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+
+    /* pulse ring effect for all buttons */
+    .float-btn::after {
+      content: '';
+      position: absolute;
+      inset: -8px;
+      border-radius: 50%;
+      border: 3px solid rgba(37, 211, 102, 0.4);
+      animation: pulse-ring 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      pointer-events: none;
+    }
+
+    .float-btn.call::after {
+      border-color: rgba(30, 190, 165, 0.4);
+    }
+
+    .float-btn.live::after {
+      border-color: rgba(255, 0, 0, 0.4);
+      animation: pulse-ring 1.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+
+    @keyframes pulse-ring {
+      0% { transform: scale(0.8); opacity: 1; }
+      80% { transform: scale(1.4); opacity: 0; }
+      100% { transform: scale(1.6); opacity: 0; }
+    }
+
+    /* small screen adjust */
+    @media (max-width: 480px) {
+      .floating-buttons {
+        bottom: 18px;
+        right: 18px;
+        gap: 12px;
+      }
+      .float-btn {
+        width: 56px;
+        height: 56px;
+        font-size: 26px;
+      }
+      .float-btn::after {
+        inset: -6px;
+      }
+      .live-badge {
+        font-size: 7px;
+        padding: 1px 5px;
+        top: -4px;
+        right: -4px;
+      }
+    }
+
+    /* ========== FOOTER ========== */
+    .footer {
+      padding: 50px 5%;
+      background: black;
+    }
+
+    .footer-card {
+      background: rgba(255, 255, 255, .06);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, .1);
+      border-radius: 25px;
+      padding: 30px 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 30px;
+    }
+
+    .footer-about h2 {
+      color: #FFD700;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .footer-about p {
+      color: white;
+      line-height: 1.8;
+      font-size: 0.95rem;
+    }
+
+    .footer-contact h3,
+    .footer-social h3 {
+      color: #FFD700;
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+    }
+
+    .footer-contact p {
+      color: white;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .social-icons img {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      transition: .4s;
+      object-fit: cover;
+      border: 1px solid rgba(255, 215, 0, .2);
+    }
+
+    .social-icons img:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 10px 20px rgba(255, 215, 0, .3);
+    }
+
+    .footer hr {
+      border: none;
+      height: 1px;
+      background: rgba(255, 255, 255, .1);
+      margin: 30px 0;
+    }
+
+    .copyright {
+      text-align: center;
+    }
+
+    .copyright p {
+      color: white;
+      margin: 8px 0;
+      font-size: 0.9rem;
+    }
+
+    .copyright a {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .copyright a:hover {
+      color: #ff9800;
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 992px) {
+      .header {
+        padding: 12px 18px;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      nav {
+        position: absolute;
+        top: 78px;
+        left: 0;
+        width: 100%;
+        background: #1d1d24;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        padding: 12px 0;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
+        gap: 0;
+        border-top: 1px solid rgba(255, 255, 255, .05);
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      nav a {
+        padding: 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, .06);
+        width: 100%;
+        font-size: 1.05rem;
+      }
+
+      nav a:last-child {
+        border-bottom: none;
+      }
+
+      .temple-container {
+        flex-direction: column;
+      }
+
+      .accordion {
+        min-width: unset;
+        width: 100%;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .social-icons {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .header {
+        padding: 10px 14px;
+        min-height: 70px;
+      }
+
+      .logo img {
+        width: 46px;
+        height: 46px;
+      }
+
+      .logo h2 {
+        font-size: 1rem;
+      }
+
+      .logo p {
+        font-size: 0.65rem;
+      }
+
+      nav {
+        top: 68px;
+      }
+
+      .hero {
+        min-height: 60vh;
+        background-position: center top;
+      }
+
+      .timings-overlay {
+        padding: 20px 16px;
+      }
+
+      .time-row {
+        grid-template-columns: 1fr;
+        padding: 12px 0;
+        gap: 4px;
+        border-bottom: 1px solid rgba(255, 255, 255, .08);
+      }
+
+      .time-row span:first-child {
+        font-weight: 600;
+        color: #FFD700;
+      }
+
+      .contact-box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .map-container iframe {
+        height: 220px;
+      }
+
+      .priest img {
+        width: 120px;
+        height: 120px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .logo h2 {
+        font-size: 0.85rem;
+      }
+
+      .logo p {
+        font-size: 0.6rem;
+      }
+
+      .accordion-header {
+        font-size: 0.95rem;
+        padding: 14px 16px;
+      }
+
+      .accordion-content ul {
+        padding: 12px 16px 18px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <img src="img/Logo.jpg" alt="Temple Logo">
+      <div>
+        <h2>శ్రీ చంద్రమౌళీశ్వర</h2>
+        <p>శ్రీ వారాహి శ్రీ శనీశ్వరస్వామి దేవాలయము</p>
+      </div>
+    </div>
+
+    <nav id="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#timings">Timings</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="videos.html">Videos</a>
+    </nav>
+
+    <button class="menu-btn" onclick="menu()" aria-label="Toggle navigation">☰</button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+ 
+    </div>
+  </section>
+
+  <!-- ABOUT / TEMPLE -->
+  <section class="temple-section" id="about">
+    <div class="section-title">
+      <h2>చంద్రమౌళీశ్వర ఘంటా మఠపాలిత శ్రీ వారాహి శనీశ్వరస్వామి దేవాలయం విశేషాలు</h2>
+    </div>
+
+    <div class="temple-container">
+      <div class="temple-image">
+        <img src="img/de37bd18-99d4-4f34-8e8b-0b310817d901.jpg" alt="Temple">
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-item active">
+          <button class="accordion-header">🔱 పక్షోత్సవాలు <span>+</span></button>
+          <div class="accordion-content">
+            <ul>
+              <li>సంకటహర చతుర్థి (హోమం) విజయ గణపతి ఆరాధన</li>
+              <li>పంచమి శ్రీ వారాహిమాత ప్రదోశ ఆరాధన</li>
+              <li>షష్ఠి బాలసుబ్రహ్మణ్యస్వామి ఆరాధన</li>
+              <li>త్రయోదశి బసవేశ్వర ప్రదోశ ఆరాధన</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">🪔 మాసోత్సవాలు <span>+</span></button>
+          <div class="accordion-content">
+            <ul>
+              <li>పౌర్ణమి విశేష పూజలు</li>
+              <li>ఆరుద్ర నక్షత్ర విశేష శివారాధన</li>
+              <li>శని త్రయోదశి, శనైశ్చర స్వామి ఆరాధన</li>
+              <li>మాస శివరాత్రి ప్రదోశ విశేష శివారాధన</li>
+              <li>అమావాస్య వారాహీదేవి హోమం</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">🎉 వార్షికోత్సవాలు <span>+</span></button>
+          <div class="accordion-content">
+            <ul>
+              <li>ఉగాది పంచాంగశ్రవణం నవగ్రహ శాంతి హోమం</li>
+              <li>శ్రీరామనవమి</li>
+              <li>ఆషాడ గుప్తవారాహీమాత నవరాత్రులు</li>
+              <li>గురుపౌర్ణమి</li>
+              <li>శ్రావణమాసోత్సవాలు</li>
+              <li>వినాయక నవరాత్రులు</li>
+              <li>దేవీ శరన్నవరాత్రులు</li>
+              <li>కార్తీక మాసోత్సవాలు</li>
+              <li>ఆలయ వార్షిక బ్రహోత్సవాలు</li>
+              <li>మహాశివరాత్రి ఉత్సవాలు</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">🕊️ శివశరణుల - జయంతోత్సవాలు <span>+</span></button>
+          <div class="accordion-content">
+            <ul>
+              <li>అల్లమప్రభు - చైత్ర శుద్ధ పాడ్యమి</li>
+              <li>అక్కమహాదేవి - చైత్ర శుక్ల పూర్ణిమ</li>
+              <li>మహాత్మబసవేశ్వర - వైశాఖ శుక్ల తదియ</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">⚡ జయంతోత్సవాలు <span>+</span></button>
+          <div class="accordion-content">
+            <ul>
+              <li>శ్రీ వీరబద్ర స్వామి జయంతి- భాద్రపద ప్రథమ భౌమవాసరం</li>
+              <li>శ్రీ జగద్గురు రేణుకాచార్య జయంతి - పాల్గుణ శుద్ధ త్రయోదశి</li>
+              <li>శ్రీ జగద్గురు ఏకోరామరాధ్య - వైశాఖ శుద్ధ తదియ</li>
+              <li>శ్రీ జగద్గురు మరుళారాధ్య జయంతి - వైశాఖ శుద్ధ పంచమి</li>
+              <li>శ్రీ జగద్గురు పండితారాధ్య జయంతి - మాఘ బహుళ చవితి</li>
+              <li>శ్రీ జగద్గురు విశ్వారాధ్య జయంతి - మాఘ బహుళ చవితి</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMINGS -->
+  <section class="timings-section" id="timings">
+    <div class="timings-overlay">
+      <h2>🕰️ విశేష పర్వదిన దర్శన సమయాలు</h2>
+      <div class="time-row"><span>Monday - Thursday</span><span>6:00 AM - 9:00 AM</span><span>6:00 PM - 7:30 PM</span></div>
+      <div class="time-row"><span>Friday</span><span>6:00 AM - 9:00 AM</span><span>6:00 PM - 8:00 PM</span></div>
+      <div class="time-row"><span>Saturday</span><span>6:00 AM - 11:00 AM</span><span>6:00 PM - 7:30 PM</span></div>
+      <div class="time-row"><span>Sunday</span><span>6:00 AM - 9:00 AM</span><span>6:00 PM - 7:30 PM</span></div>
+      <div class="festival">🌸 Festival Days – Special Poojas & Extended Darshan Timings</div>
+    </div>
+  </section>
+  <section class="timings-section" id="timings">
+    <div class="timings-overlay">
+      <h2>🕰️ నిత్య దర్శన సమయాలు</h2>
+      <div class="time-row"><span>Monday - Thursday</span><span>6:00 AM - 10:00 AM</span><span>6:00 PM - 7:30 PM</span></div>
+      <div class="time-row"><span>Friday</span><span>6:00 AM - 11:30 AM</span><span>6:00 PM - 8:00 PM</span></div>
+      <div class="time-row"><span>Saturday</span><span>6:00 AM - 11:00 AM</span><span>6:00 PM - 7:30 PM</span></div>
+      <div class="time-row"><span>Sunday</span><span>6:00 AM - 10:00 AM</span><span>6:00 PM - 7:30 PM</span></div>
+      
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="location-section" id="map">
+    <div class="location-card">
+      <h2>📍 ఆలయ స్థానం</h2>
+      <h3>శ్రీవారాహి శ్రీ శనీశ్వరస్వామి దేవాలయము</h3>
+      <p>
+        Ward No : Aadarsha Nagar,<br>
+        Double Bedroom,<br>
+        Mahabubnagar,<br>
+        Telangana - 509001
+      </p>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15287.634355206383!2d78.000000!3d16.750000!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDQ1JzAwLjAiTiA3OMKwMDAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1700000000000"
+          loading="lazy"
+          allowfullscreen=""
+          title="Temple location map">
+        </iframe>
+      </div>
+      <a href="https://maps.app.goo.gl/tVMU1r6h9QhkrTR16" target="_blank" class="map-btn">🗺️ Open in Google Maps</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-card">
+      <div class="footer-top">
+        <div class="footer-about">
+          <h2>సంప్రదించండి</h2>
+          <div class="priest">
+            <img src="img/poojari img.jpg" alt="Vinod Kumar Swamy">
+            <h3>శ్రీ వినోద్ కుమార్ స్వామి</h3>
+            <p>Chief Priest</p>
+          </div>
+          <h2>🛕 శ్రీ వారాహి శ్రీ శనీశ్వరస్వామి దేవాలయము</h2>
+          <p>🙏 సేవలు • పూజలు • ఆరాధన • దర్శనం</p>
+          <p>Ward No : Aadarsha Nagar, Double Bedroom, Mahabubnagar, Telangana - 509001</p>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact</h3>
+          <p>📞 +91 94407 90912</p>
+        
+        </div>
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="tel:9440790912"><img src="img/phone_calling.jpg" alt="Phone"></a>
+            <a href="https://youtube.com/@srivaraahi_temple_mbnr?si=irU-FSoUpXk6PUnU"><img src="img/youtube.jpg" alt="YouTube"></a>
+            <a href="https://www.instagram.com/srivarahi_temple_mbnr?igsh=MTR2MGhrenU4MWp4eA=="><img src="img/instagram.jpg" alt="Instagram"></a>
+            <a href="https://www.facebook.com/share/15jhLXDvW8/"><img src="img/facebook.jpg" alt="Facebook"></a>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="copyright">
+        <p>© 2025 శ్రీ వారాహి శ్రీ శనీశ్వరస్వామి దేవాలయము. All Rights Reserved.</p>
+        <p>Designed & Developed by <a href="https://babluhosters.com">BABLU HOSTERS</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== FLOATING BUTTONS (WhatsApp + Phone + Live) ===== -->
+  <div class="floating-buttons">
+    <!-- YouTube Live Stream -->
+    <a href="https://www.youtube.com/@srivaraahi_temple_mbnr/live" target="_blank" class="float-btn live live-pulse" aria-label="Live Stream">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white">
+        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+      </svg>
+      <span class="live-badge">LIVE</span>
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/919440790912" target="_blank" class="float-btn ringing" aria-label="WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </a>
+    
+    <!-- Phone Call -->
+    <a href="tel:9440790912" class="float-btn call ringing" aria-label="Call">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white">
+        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+      </svg>
+    </a>
+  </div>
+
+  <script>
+    // ========== MENU TOGGLE ==========
+    function menu() {
+      document.getElementById("nav").classList.toggle("show");
+    }
+
+    // ========== ACCORDION ==========
+    const accordionHeaders = document.querySelectorAll(".accordion-header");
+    accordionHeaders.forEach(button => {
+      button.addEventListener("click", function () {
+        const item = this.parentElement;
+        const allItems = document.querySelectorAll(".accordion-item");
+        allItems.forEach(i => {
+          if (i !== item) i.classList.remove("active");
+        });
+        item.classList.toggle("active");
+      });
+    });
+
+    // ========== CLOSE NAV ON LINK CLICK ==========
+    document.querySelectorAll("#nav a").forEach(link => {
+      link.addEventListener("click", () => {
+        document.getElementById("nav").classList.remove("show");
+      });
+    });
+
+    // ========== CLOSE NAV ON OUTSIDE CLICK ==========
+    const nav = document.getElementById("nav");
+    const menuBtn = document.querySelector(".menu-btn");
+    document.addEventListener("click", (e) => {
+      if (!nav.contains(e.target) && !menuBtn.contains(e.target)) {
+        nav.classList.remove("show");
+      }
+    });
+  </script>
+</body>
+</html>
