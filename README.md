@@ -8,7 +8,7 @@
 </p>
 
 ---
-<img width="1902" height="946" alt="image" src="https://github.com/user-attachments/assets/4b5c5d5c-ad1e-47ab-8572-6b08f876e713" />
+
 
 
 ## 🌐 Live Website
