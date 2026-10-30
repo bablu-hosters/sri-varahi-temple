@@ -1,4 +1,4 @@
-         # 🛕 Sri Varahi Sri Shanishvara Swamy Temple Website
+         
 
 <p align="center">
   <h2 align="center">శ్రీవారాహి శ్రీ శనీశ్వరస్వామి దేవాలయము</h2>
