@@ -1,4 +1,4 @@
-# 🛕 Sri Varahi Sri Shanishvara Swamy Temple Website
+<img width="1902" height="946" alt="image" src="https://github.com/user-attachments/assets/eea5b954-3930-4317-b93b-5ee71166be83" /># 🛕 Sri Varahi Sri Shanishvara Swamy Temple Website
 
 <p align="center">
   <h2 align="center">శ్రీవారాహి శ్రీ శనీశ్వరస్వామి దేవాలయము</h2>
@@ -8,11 +8,12 @@
 </p>
 
 ---
-<img width="1875" height="890" alt="Screenshot 2026-08-12 202557" src="https://github.com/user-attachments/assets/f9dd93fc-11a0-472b-bb50-ff64eee8fef5" />
+<img width="1902" height="946" alt="image" src="https://github.com/user-attachments/assets/4b5c5d5c-ad1e-47ab-8572-6b08f876e713" />
+
 
 ## 🌐 Live Website
 
-🔗 **Website:** https://srivarahitemple.netlify.app/
+🔗 **Website:**  https://srivarahitemplembnr.com/
 
 The website provides devotees with information about the temple, special poojas, festivals, opening hours, gallery, videos, and contact details.
 
@@ -194,7 +195,7 @@ The website is deployed using **Netlify**.
 
 🔗 Live Project:
 
-https://srivarahitemple.netlify.app/
+https://srivarahitemplembnr.com/
 
 ---
 
