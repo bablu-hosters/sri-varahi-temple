@@ -1,4 +1,4 @@
-<img width="1902" height="946" alt="image" src="https://github.com/user-attachments/assets/eea5b954-3930-4317-b93b-5ee71166be83" /># 🛕 Sri Varahi Sri Shanishvara Swamy Temple Website
+# 🛕 Sri Varahi Sri Shanishvara Swamy Temple Website
 
 <p align="center">
   <h2 align="center">శ్రీవారాహి శ్రీ శనీశ్వరస్వామి దేవాలయము</h2>
@@ -6,7 +6,7 @@
     A dedicated website for Sri Varahi Sri Shanishvara Swamy Temple, Mahabubnagar, Telangana.
   </p>
 </p>
-
+<img width="1902" height="946" alt="image" src="https://github.com/user-attachments/assets/eea5b954-3930-4317-b93b-5ee71166be83" />
 ---
 
 
